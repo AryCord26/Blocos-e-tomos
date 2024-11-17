@@ -1,0 +1,165 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3d3;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-image: url('https://lojawebcontinental.vtexassets.com/arquivos/ids/24713297/MKP001176000242-2.jpg?v=638296130150500000');
+    background-size: cover;
+    color: #fff;
+    padding: 1em;
+    width: 250px;
+    min-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 0;
+    transition: width 0.3s ease;
+    padding-top: 60px;
+}
+
+.sidebar.closed {
+    width: 50px;
+}
+
+.sidebar h1 {
+    font-size: 1.5em;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: #797979;
+    text-align: center;
+    -webkit-text-stroke: 1px #000;
+    padding: 1em 0;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.closed h1 {
+    opacity: 0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 1em;
+}
+
+.sidebar nav ul li a.button {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-text-stroke: 1px #000;
+}
+
+.sidebar.closed nav ul li a.button {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar nav ul li a.button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke: 2px #156905;
+}
+
+.sidebar.closed nav ul li a.button:hover {
+    background-color: transparent;
+}
+
+.sidebar nav ul li a.button.apresentacao {
+    background-image: url('https://preview.redd.it/76jbhk5spok61.png?width=1600&format=png&auto=webp&s=bff53c1577d6a16a66fbd1f7a714d0b072a6f54e');
+}
+
+.sidebar nav ul li a.button.sobre {
+    background-image: url('https://preview.redd.it/z94n9dno15i61.png?auto=webp&s=2d0a14ca2c9d500636d83713de6d1821a02bb0ab');
+}
+
+.sidebar nav ul li a.button.jornada {
+    background-image: url('https://pbs.twimg.com/media/EtVSTqSXYAI9RJo.jpg');
+}
+
+.sidebar nav ul li a.button.contato {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUyOL4D5n09os8oYhTjAqUw7oLVOUxC2C37A&s');
+}
+
+.sidebar-toggle {
+    background-image: url('https://i.pinimg.com/originals/e9/a1/fc/e9a1fc94f3b36348ba98e550bdf4a207.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    padding: 20px 0;
+    border-radius: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: width 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    opacity: 1;
+}
+
+.sidebar-toggle:focus {
+    outline: none;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 2em;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+    min-height: calc(100vh - 50px);
+    background-color: #fff;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+footer {
+    background-image: url('https://preview.redd.it/vpxe4sikygp61.jpg?auto=webp&s=0dd9b2f0095d0c1232414a8100cfe2c4a62c2248');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+}
